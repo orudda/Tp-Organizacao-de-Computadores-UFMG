@@ -11,5 +11,4 @@
 	
 	#efetua operação para descobrir o resto da divisão por 2
         rem a1, t1, t0 
-	
 	#saida no registrador a1
