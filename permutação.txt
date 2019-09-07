@@ -32,6 +32,7 @@
         
             beq zero, zero, Zera
         
+	# compara para ver se ha valor igual e salva indice no vetor aux
         Compara:
             addi s3, zero, -1 #indice primeiro vetor
             addi s4, zero, -1 #indice segundo vetor
