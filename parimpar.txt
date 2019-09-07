@@ -3,9 +3,13 @@
 	number: .word 5
         
 .text
-        #coloca o valor no registrador
+        #carrega o valor para o registrador
         lw t1, number
         
-        #efetua operação para descobrir o resto da divisão por 2
+	#t0 registrador a ser usado para realizar a divisao por 2
         addi t0, zero, 2
-        rem a1, t1, t0 #saida no registrador a1
+	
+	#efetua operação para descobrir o resto da divisão por 2
+        rem a1, t1, t0 
+	
+	#saida no registrador a1
