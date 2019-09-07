@@ -1,0 +1,27 @@
+﻿
+.data
+	#entrada
+	input:.word 4 
+    
+.text
+	#carrega da memoria
+	lw a0, input	
+	
+	#t1 sera o registrador que acumulará a multiplicação
+	addi t1, zero, 1
+loop:
+	#t1 = t1*a0
+	mul t1, t1, a0
+	
+	#a0 - 1
+	addi a0, a0, -1
+	
+	#se a0 for igual 0, então acabou as interações
+	beq a0, zero, exit
+	
+	#senão continua multiplicando
+	beq zero, zero, loop
+	
+exit:	
+	#devolve o valor acumulado para a0
+	addi a0, zero, t1
