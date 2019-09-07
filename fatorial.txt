@@ -7,19 +7,20 @@
 	#carrega da memoria
 	lw a0, input	
 	
-	#t1 sera o registrador que acumulará a multiplicação
+	#t1 sera o registrador que acumulará a multiplicação e comeca com valor unitario
 	addi t1, zero, 1
 loop:
 	#t1 = t1*a0
 	mul t1, t1, a0
 	
+	#subtrai de a0 1 unidade a cada entrada no loop 
 	#a0 - 1
 	addi a0, a0, -1
 	
 	#se a0 for igual 0, então acabou as interações
 	beq a0, zero, exit
 	
-	#senão continua multiplicando
+	#senão continua multiplicando ate encontrar o valor final do fatorial
 	beq zero, zero, loop
 	
 exit:	
